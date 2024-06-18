@@ -14,8 +14,7 @@ env:
   AZURE_WEBAPP_NAME: SanderLeung-ttt-app
   ###############################################
 
-permissions:
-  id-token: write
+permissions: write-all
 
 jobs:
   build:
