@@ -10,7 +10,7 @@ env:
   ###############################################
   ### Replace <username> with GitHub username ###
   ###############################################
-  DOCKER_IMAGE_NAME: SanderLeung-azure-ttt
+  DOCKER_IMAGE_NAME: sanderleung-azure-ttt
   AZURE_WEBAPP_NAME: SanderLeung-ttt-app
   ###############################################
 
