@@ -13,6 +13,7 @@ env:
   DOCKER_IMAGE_NAME: sanderleung-azure-ttt
   AZURE_WEBAPP_NAME: SanderLeung-ttt-app
   ###############################################
+  REPOSITORY: sanderleung
 
 permissions: write-all
 
@@ -59,7 +60,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{env.IMAGE_REGISTRY_URL}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}
+          images: ${{env.IMAGE_REGISTRY_URL}}/${{ env.REPOSITORY }}/${{env.DOCKER_IMAGE_NAME}}
           tags: |
             type=sha,format=long,prefix=
 
@@ -93,7 +94,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{env.AZURE_WEBAPP_NAME}}
-          images: ${{env.IMAGE_REGISTRY_URL}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{github.sha}}
+          images: ${{env.IMAGE_REGISTRY_URL}}/${{ env.REPOSITORY }}/${{env.DOCKER_IMAGE_NAME}}:${{github.sha}}
 
       - name: Azure logout via Azure CLI
         uses: azure/CLI@v2
