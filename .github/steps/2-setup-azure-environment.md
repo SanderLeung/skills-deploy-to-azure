@@ -70,7 +70,7 @@ We won't be going into detail on the steps of this workflow, but it would be a g
     }
     ```
 1.  Back on GitHub, click on this repository's **Secrets and variables > Actions** in the Settings tab.
-2.  1.  Click **New repository secret**
+1.  Click **New repository secret**
 1.  Name your new secret **AZURE_CREDENTIALS** and paste the copied contents of the command's response.
 1.  Click **Add secret**.
 1.  Click **New repository secret**
